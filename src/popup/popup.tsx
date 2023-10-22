@@ -82,11 +82,13 @@ function focusClick() {
 			removeFocusDisplay();
 			chrome.storage.sync.set({ focusMode: "no" }, function () {
 				console.log("focus mode disabled NOW!");
+				chrome.tabs.reload();
 			});
 		} else {
 			chrome.storage.sync.set({ focusMode: "yes" }, function () {
 				focusDisplay();
 				console.log("focus mode enabled NOW!");
+				chrome.tabs.reload();
 			});
 		}
 	});

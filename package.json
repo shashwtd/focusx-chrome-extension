@@ -6,8 +6,8 @@
   "author": "Shashwat Dubey",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack",
-    "watch": "webpack --watch --progress --config webpack.config.js"
+    "watch": "webpack --watch --progress --config webpack.dev.js",
+    "build": "webpack --watch --progress --config webpack.prod.js"
   },
   "dependencies": {
     "firebase": "^10.5.0",
