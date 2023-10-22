@@ -3,6 +3,8 @@ FocusX is a chrome extension that aims to help reduce distraction and increase y
 
 ## Install Directly Without Building
 Yes, you can also directly install skip to the Installing part without having to build the extension
+- just download and install focusX.zip
+- skip to installing part for more details
 
 ## How to Build this extension?
 
