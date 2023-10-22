@@ -1,0 +1,29 @@
+{
+	"manifest_version": 3,
+	"name": "FocusX",
+	"version": "1.0.0",
+	"description": "FocusX is a chrome extension that aims to help reduce distraction and increase your workflow by blocking your access to the websites that you get distracted by. ",
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"permissions": ["storage", "tabs", "activeTab", "scripting", "identity"],
+	"host_permissions": ["<all_urls>"],
+	"action": {
+		"default_title": "FocusX",
+		"default_popup": "popup.html",
+		"default_icon": "icon.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["blocker.js"],
+			"css": ["blocker.css"],
+			"run_at": "document_idle"
+		}
+	]
+}
